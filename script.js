@@ -16,3 +16,14 @@
       ex2_content.innerHTML = "Numer telefonu jest poprawny.";
   })
 })();
+function allowDrop(dd) {
+  dd.preventDefault();
+}
+function drag(dd) {
+  dd.dataTransfer.setData("text", dd.target.id);
+}
+function drop(dd) {
+  dd.preventDefault();
+  var dane = dd.dataTransfer.getData("text");
+  dd.target.appendChild(document.getElementById(dane));
+}

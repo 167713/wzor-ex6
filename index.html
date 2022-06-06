@@ -16,17 +16,17 @@
 
       <div id="ex2" class="ex">
         <h5>Ex2 - Validation</h5>
-        <input type="text" id="ex2_text" placeholder="phone number" />
+        <input type="text" id="ex2_text" placeholder="Phone number" />
         <div id="ex2_content"></div>
       </div>
 
       <div id="ex3" class="ex">
         <h5>Ex3 - Drag&Drop</h5>
         <div>
-          <div id="ex3_one">
-            <div id="ex3_element">Content</div>
+          <div id="ex3_one" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="ex3_element" draggable="true" ondragstart="drag(event)">Drag/Drop</div>
           </div>
-          <div id="ex3_two"></div>
+          <div id="ex3_two" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </div>
       </div>
 
